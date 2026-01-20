@@ -2,15 +2,19 @@ require('dotenv').config()
 const cookieParser = require('cookie-parser');
 let express=require('express');
 let mongoose=require('mongoose');
-const authrouter = require('./App/routes/authroute');
-// let cookieParser=require("cookie-parser")
+let cors=require('cors')
+const authrouter = require('./App/server/routes/authroute');
 
+    
 let app=express()
 
 app.use(express.json()) 
 app.use(cookieParser()) 
 
-app.use("/api/auth",authrouter);
+const allowedOrigin=["http://localhost:5173"]
+app.use(cors({origin:allowedOrigin,credentials:true}))
+
+app.use("/api/auth",authrouter); 
 
 app.get("/",(req,res)=>{
     res.send("API WORKING PERFECTLY")
