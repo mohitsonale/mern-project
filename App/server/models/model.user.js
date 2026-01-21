@@ -15,10 +15,10 @@ let userSchema=new mongoose.Schema({
     password:{
         type:String,
         required:true,
-        unique:true
+        unique:true 
     }
 })
 
 let userModel=mongoose.model("user",userSchema);
 
-module.exports=userModel;
+module.exports=userModel; 
