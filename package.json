@@ -4,8 +4,9 @@
   "main": "server/server.js",
   "type": "commonjs",
   "scripts": {
-   "start": "node App/server/server.js",
-  "dev": "nodemon App/server/server.js"
+   "start": "node server/server.js",
+   "dev": "nodemon server/server.js"
+   
 
   },
   "dependencies": {
