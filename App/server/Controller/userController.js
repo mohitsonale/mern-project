@@ -1,4 +1,4 @@
-let bcrypt=require("bcryptjs")
+let bcrypt=require("../../../node_modules/bcryptjs/umd")
 let jwt=require("jsonwebtoken")
 const userModel = require("../models/model.user");
 
