@@ -29,7 +29,7 @@ let register=async(req,res)=>{
 
         await user.save();
 
-        let token=jwt.sign({id:user._id},process.env.JWT_SECRET,{expiresIn:"7d"}) //Encode the token
+        let token=jwt.sign({id:user._id},process.env.JWT_SECRET,{expiresIn:"7d"}) 
 
         res.cookie("token",token,{
             httpOnly:true,
@@ -71,7 +71,7 @@ let login=async(req,res)=>{
             res.send({success:false,message:"Password is Wrong"})
         }
         
-        let token=jwt.sign({id:user._id},process.env.JWT_SECRET,{expiresIn:"7d"}) //Decode password
+        let token=jwt.sign({id:user._id},process.env.JWT_SECRET,{expiresIn:"7d"}) 
 
         res.cookie("token",token,{
             httpOnly:true,

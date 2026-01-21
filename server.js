@@ -3,7 +3,8 @@ const cookieParser = require('cookie-parser');
 let express=require('express');
 let mongoose=require('mongoose');
 let cors=require('cors')
-const authrouter = require('./App/server/routes/authroute');
+// const authrouter = require('./routes/authroute');
+const authrouter=require('./App/server/routes/authroute')
 
     
 let app=express()
@@ -16,7 +17,7 @@ app.use(cors({origin:allowedOrigin,credentials:true}))
 
 app.use("/api/auth",authrouter); 
 
-app.get("/",(req,res)=>{
+app.get("/",(req,res)=>{ 
     res.send("API WORKING PERFECTLY")
 })
 
