@@ -8,7 +8,7 @@ const authrouter = require('./routes/authroute');
 
 
 
-let app=express()
+let app=express() 
 console.log("Mongo URL:", process.env.MONGO_URL);
 app.use(express.json())    
 app.use(cookieParser()) 

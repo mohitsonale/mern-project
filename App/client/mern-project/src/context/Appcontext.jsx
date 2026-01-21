@@ -11,6 +11,9 @@ function Appcontextprovider(props){
     const[isLoggedin,SetIsLoggedin]=useState(false);
     const[userData,SetUserData]=useState(false);
 
+    console.log(import.meta.env.VITE_BACKEND_URL);
+
+
     const value={
         backendurl,
         isLoggedin,SetIsLoggedin,
