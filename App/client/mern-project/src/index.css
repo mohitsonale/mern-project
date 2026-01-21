@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+/* Now layers work */
+@layer base {
+  body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+  }
+}

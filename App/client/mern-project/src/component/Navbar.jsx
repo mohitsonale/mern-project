@@ -34,10 +34,10 @@ function Navbar(){
 
     return(
         <div className="w-full flex justify-between items-center  p-4 sm:p-6 sm:px-24 absolute top-0 ">
-            <img src={assets.logo} alt="" className="w-28 sm:w-32  cursor-pointer hover:shadow-xl shadow-blue-200 hover:w-[11%] transition-all " />
+            <img src={assets.logo} alt="" className="w-28 sm:w-32  cursor-pointer hover:shadow-xl shadow-blue-200 hover:w-[11%] transition-all"/>
            
             {
-                isLoggedin && ( <button onClick={handlelogout}  className="flex items-center  gap-2 border cursor-pointer hover:shadow-xl shadow-blue-200 border-gray-700  rounded-full px-6 py-2 text-gray-800 hover:bg-blue-300 hover:px-7  hover:text-[19px]  hover:gap-4  transition-all ">Logout<img  src={assets.arrow_icon} alt="" />
+                isLoggedin && ( <button onClick={handlelogout}  className="flex items-center text-blue-900  gap-2 border cursor-pointer hover:shadow-xl shadow-blue-200 border-gray-700  rounded-full px-6 py-2  hover:bg-blue-300 hover:px-7  hover:text-[19px]  hover:gap-4  transition-all ">Logout<img  src={assets.arrow_icon} alt="" />
             </button>)
             }
            
