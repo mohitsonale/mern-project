@@ -5,6 +5,6 @@ let authrouter=express.Router();
 
 authrouter.post("/register",register)
 authrouter.post("/login",login)
-authrouter.delete("/logout",authMiddleware,logout)
+authrouter.delete("/logout",logout)
 
 module.exports=authrouter
