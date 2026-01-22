@@ -4,7 +4,8 @@
   "type": "commonjs",
   "scripts": {
     "start": "node App/server/server.js",
-    "dev": "nodemon App/server/server.js"
+    "dev": "nodemon App/server/server.js",
+     "build": "react-scripts build"
   },
   "dependencies": {
     "bcryptjs": "^3.0.3",
