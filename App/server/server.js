@@ -17,10 +17,6 @@ app.use(cors({origin:allowedOrigin,credentials:true}))
 
 app.use("/api/auth",authrouter); 
 
-app.get("/",(req,res)=>{ 
-    res.send("API WORKING PERFECTLY")
-})
-  
 
  mongoose.connect(process.env.MONGO_URL).then(()=>{
 
