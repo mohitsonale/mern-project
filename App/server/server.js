@@ -7,12 +7,12 @@ const authrouter = require('./routes/authroute');
 
 
 
-let app=express() 
+let app=express()  
 console.log("Mongo URL:", process.env.MONGO_URL);
 app.use(express.json())    
 app.use(cookieParser()) 
 
-const allowedOrigin=["http://localhost:5173","https://mern-project-auth-526z.onrender.com"]
+const allowedOrigin=["http://localhost:5173","https://mern-project-9vb9.onrender.com"]
 app.use(cors({origin:allowedOrigin,credentials:true}))
 
 app.use("/api/auth",authrouter); 
