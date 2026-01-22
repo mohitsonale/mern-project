@@ -24,7 +24,8 @@ function Login(){
 
             if(state==="sign up"){
 
-                const {data}=await axios.post(backendurl + "/api/auth/register",{name,email,password})
+                const {data}=await axios.post(`${backendurl}/api/auth/register`, { name, email, password })
+
 
                 if(data.success){
                     SetIsLoggedin(true)
@@ -37,7 +38,8 @@ function Login(){
             }
             else{
 
-                 const {data}=await axios.post(backendurl+"/api/auth/login",{email,password})
+                 const {data}=await axios.post(`${backendurl}/api/auth/login`, { email, password })
+
 
                 if(data.success){
                     SetIsLoggedin(true)

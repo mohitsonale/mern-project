@@ -92,26 +92,20 @@ let login=async(req,res)=>{
 
 }
 
-let logout=async(req,res)=>{
+let logout = async (req, res) => {
+  try {
+    
+    res.clearCookie("token", {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production", 
+      sameSite: process.env.NODE_ENV === "production" ? "none" : "strict",
+    });
 
-    try{
+    return res.status(200).send({ success: true, message: "Logout Successful" });
+  } catch (error) {
+    return res.status(500).send({ success: false, message: error.message });
+  }
+};
 
-   const userId = req.user._id;
-   await userModel.findByIdAndDelete(userId);
-
-        res.clearCookie("token",{
-            httpOnly:true,
-            secure:process.env.NODE_ENV==="production",
-            samesite:process.env.NODE_ENV==="production"?"none":"strict"
-            
-        })
-
-        return res.send({success:true,message:"Logout Successfull"})
-
-    }
-    catch(error){
-        return res.send({success:false,message:error.message})
-    }
-}
 
 module.exports={register,login,logout}

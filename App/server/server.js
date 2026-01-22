@@ -26,7 +26,7 @@ app.get("/",(req,res)=>{
 
     console.log("Connected to Mongodb")
 
-    app.listen( process.env.MY_PORT || 5000,()=>{ 
+    app.listen(process.env.MY_PORT || 5000,()=>{ 
         console.log(`Server running on port ${process.env.MY_PORT}`) 
     })
  })

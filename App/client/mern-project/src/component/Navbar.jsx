@@ -14,7 +14,8 @@ function Navbar(){
         
         try{
 
-            const{data}=await axios.delete(backendurl + "/api/auth/logout")
+            const{data}=await axios.delete(`${backendurl}/api/auth/logout`, { withCredentials: true })
+
 
             if(data.success){
                 SetIsLoggedin(false)
